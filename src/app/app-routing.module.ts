@@ -5,6 +5,7 @@ import { EditarHeroeComponent } from './heroes/editar-heroe/editar-heroe.compone
 import { HeroesComponent } from './heroes/heroes.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/heroes', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'heroes/crear', component: CrearHeroeComponent },
   { path: 'heroes/editar/:id', component: EditarHeroeComponent }
