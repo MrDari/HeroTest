@@ -1,0 +1,54 @@
+<div class="row align-items-center">
+  <div class="col-md-8 m-5 align-items-center justify-content-center">
+    <mat-card>
+      <mat-card-title class="m-2">Editar Héroe</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="heroForm" class="form">
+          <div class="row">
+            <div class="col-md-4">
+              <mat-form-field class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input formControlName="nameFormControl" matInput />
+
+                <mat-error
+                  *ngIf="heroForm.controls.nameFormControl.hasError('required')"
+                >
+                  Nombre es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4">
+              <mat-form-field class="full-width">
+                <mat-label>Company</mat-label>
+                <input formControlName="companyFormControl" matInput />
+
+                <mat-error
+                  *ngIf="
+                    heroForm.controls.companyFormControl.hasError('required')
+                  "
+                >
+                  Compañía es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button
+          mat-raised-button
+          class="m-1"
+          [disabled]="heroForm.invalid"
+          (click)="editHero()"
+          color="primary"
+        >
+          Editar
+        </button>
+        <button mat-raised-button routerLink="/heroes" class="m-1" color="warn">
+          Cancelar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
