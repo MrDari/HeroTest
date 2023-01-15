@@ -33,11 +33,16 @@ export class EditarHeroeComponent {
 
   ngOnInit(){
     let id = this.route.snapshot.params['id'];
-   this.hero= this.heroesService.getHero(id)
-   this.heroForm.setValue({
-    nameFormControl: this.hero.nombre,
-    companyFormControl: this.hero.company
-   })
+    this.heroesService.getHero(id).subscribe(data => {
+      console.log(data)
+      this.hero = data
+      this.heroForm.setValue({
+        nameFormControl: this.hero.nombre,
+        companyFormControl: this.hero.company
+       })
+    })
+
+
   }
 
   editHero(){
@@ -48,7 +53,10 @@ export class EditarHeroeComponent {
         company: this.heroForm.value.companyFormControl
 
       }
-      this.heroesService.editHero(heroEdited)
+      this.heroesService.editHero(heroEdited).subscribe(data => {
+
+        console.log(data)
+      })
       this.router.navigate(['/']).then(() => {
         this.router.navigate(['/heroes'])
       })

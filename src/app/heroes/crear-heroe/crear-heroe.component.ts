@@ -29,7 +29,10 @@ export class CrearHeroeComponent {
         company: this.heroForm.value.companyFormControl
 
       }
-      this.heroesService.addHero(hero)
+      this.heroesService.addHero(hero).subscribe(data => {
+
+        console.log(data)
+      })
       this.router.navigate(['/']).then(() => {
         this.router.navigate(['/heroes'])
       })

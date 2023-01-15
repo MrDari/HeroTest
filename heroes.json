@@ -1,0 +1,34 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "nombre": "Spiderman",
+      "company": "Marvel"
+    },
+    {
+      "nombre": "IronMan",
+      "company": "Marvel",
+      "id": 2
+    },
+    {
+      "nombre": "Aquaman",
+      "company": "DC",
+      "id": 3
+    },
+    {
+      "nombre": "Batman",
+      "company": "DC",
+      "id": 4
+    },
+    {
+      "nombre": "AntMan",
+      "company": "Marvel",
+      "id": 5
+    },
+    {
+      "nombre": "Hulk",
+      "company": "Marvel",
+      "id": 6
+    }
+  ]
+}

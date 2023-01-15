@@ -14,8 +14,9 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class HeroesComponent {
   displayedColumns: string[] = ['id', 'nombre', 'company', 'action'];
-  dataSource!: MatTableDataSource<Hero>;
+  dataSource!: MatTableDataSource<Hero >;
   heroesFiltered: Hero[] = [];
+  heroes: Hero[] = [];
 
 
   @ViewChild(MatPaginator)
@@ -30,7 +31,13 @@ export class HeroesComponent {
   ) {}
 
   ngOnInit(): void {
-    this.dataSource = new MatTableDataSource(this.heroesService.getHeroes());
+   // this.dataSource = new MatTableDataSource(this.heroesService.getHeroes());
+   this.heroesService.getHeroes().subscribe((data) => {
+    this.dataSource = new MatTableDataSource (data)
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+
+   })
 
   }
 
@@ -45,10 +52,7 @@ export class HeroesComponent {
     }
   }
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
+
 
 
 
@@ -58,8 +62,9 @@ export class HeroesComponent {
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (true) {
-        this.heroesService.deleteHero(id);
-        this.dataSource.data = this.heroesService.getHeroes();
+        this.heroesService.deleteHero(id).subscribe();
+        this.ngOnInit()
+        //this.dataSource.data = this.heroesService.getHeroes();
       }
     });
   }
