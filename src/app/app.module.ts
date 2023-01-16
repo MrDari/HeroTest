@@ -15,17 +15,22 @@ import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
 import { CrearHeroeComponent } from './heroes/crear-heroe/crear-heroe.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarHeroeComponent } from './heroes/editar-heroe/editar-heroe.component';
+import { HeroesModule } from './heroes/heroes.module';
+import { CrearHeroeModule } from './heroes/crear-heroe/crear-heroe.module';
+import { EditarHeroeModule } from './heroes/editar-heroe/editar-heroe.module';
+import { DialogDeleteModule } from './dialog-delete/dialog-delete.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    DialogDeleteComponent,
-    CrearHeroeComponent,
-    EditarHeroeComponent
+
   ],
   imports: [
     BrowserModule,
+    HeroesModule,
+    DialogDeleteModule,
+    CrearHeroeModule,
+    EditarHeroeModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

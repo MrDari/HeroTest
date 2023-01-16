@@ -29,6 +29,34 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
+  imports: [
+    CommonModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatDividerModule,
+    MatSidenavModule,
+    MatTabsModule,
+    MatTableModule,
+    MatBadgeModule,
+    MatToolbarModule,
+    MatListModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatExpansionModule,
+    MatTreeModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatAutocompleteModule,
+    ScrollingModule,
+    MatCheckboxModule
+  ],
   exports: [
     CommonModule,
     MatPaginatorModule,
