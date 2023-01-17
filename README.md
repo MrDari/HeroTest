@@ -20,7 +20,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test  --code-coverage` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+Can also open index.html file inside coverage folder to see the % of testing coverage
 
 ## Running end-to-end tests
 
