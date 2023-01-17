@@ -1,49 +1,17 @@
-<div class="col-md-12 mt-2" style="text-align: center;">
-
-
-
-  <mat-card-subtitle  ><strong style="font-size: larger;">Está seguro que desea eliminar?</strong></mat-card-subtitle>
-
-
-
-  <mat-card-actions  >
-
-    <button
-
-    class="m-2"
-
-    (click)="enviarDatos()"
-
-    mat-raised-button
-
-  color="warn"
-
+<div class="col-md-12 mt-2" style="text-align: center">
+  <mat-card-subtitle
+    ><strong style="font-size: larger"
+      >Está seguro que desea eliminar?</strong
+    ></mat-card-subtitle
   >
 
-  Confirmar
+  <mat-card-actions>
+    <button class="m-2" (click)="enviarDatos()" mat-raised-button color="warn">
+      Confirmar
+    </button>
 
-</button>
-
-<button
-
-
-
-(click)="close()"
-
-class="m-2"
-
-mat-raised-button
-
-color="primary"
-
->
-
-Cancelar
-
-</button>
-
-</mat-card-actions>
-
-
-
+    <button (click)="close()" class="m-2" mat-raised-button color="primary">
+      Cancelar
+    </button>
+  </mat-card-actions>
 </div>
