@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrearHeroeComponent } from './crear-heroe.component';
 import { MaterialModule } from 'src/app/material.module';
+import { HeroesRoutingModule } from '../heroes-routing.module';
+
 
 
 
@@ -14,7 +16,8 @@ import { MaterialModule } from 'src/app/material.module';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    HeroesRoutingModule
   ]
 })
 export class CrearHeroeModule { }

@@ -7,9 +7,10 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { HeroesComponent } from './heroes.component';
 import { HeroesService } from '../shared/heroes.service';
-import { HeroesServiceMock } from './heroes.service.mock';
+import { HeroesServiceMock } from '../models/heroes.service.mock';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -18,7 +19,7 @@ describe('HeroesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports :[
-        AppRoutingModule,
+        RouterTestingModule,
         HttpClientTestingModule,
         MaterialModule,
         MatDialogModule,

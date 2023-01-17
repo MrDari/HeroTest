@@ -43,7 +43,7 @@ export class HeroesComponent {
 
   applyFilter(event: Event):void {
     const filterValue = (event.target as HTMLInputElement).value;
-    this.heroesFiltered = this.heroesService.searchHeroes(filterValue);
+    this.dataSource.filter = filterValue.trim().toLowerCase();
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }

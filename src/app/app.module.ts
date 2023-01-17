@@ -35,6 +35,7 @@ import { DialogDeleteModule } from './dialog-delete/dialog-delete.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatCardModule,
     NgbModule,
 
   ],

@@ -28,14 +28,11 @@ export class HeroesService {
     return this.http.get<Hero>(this.api);
   }
 
-  public getHero(id: any) {
+  public getHero(id: any): Observable<any> {
     return this.http.get<Hero>(`${this.api}/${id}`);
   }
 
-  public searchHeroes(cadena: any) {
-    this.heroesFiltered = this.heroes.filter((i) => i.nombre.includes(cadena));
-    return this.heroesFiltered;
-  }
+
 
   public addHero(hero: any): Observable<any> {
     return this.http.post<Hero>(this.api, hero, httpOptions);

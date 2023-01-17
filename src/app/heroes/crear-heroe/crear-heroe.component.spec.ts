@@ -7,7 +7,10 @@ import { MaterialModule } from 'src/app/material.module';
 import { HeroesService } from 'src/app/shared/heroes.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CrearHeroeComponent } from './crear-heroe.component';
-import { HeroesServiceMock } from '../heroes.service.mock';
+import { HeroesServiceMock } from '../../models/heroes.service.mock';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { HeroesRoutingModule } from '../heroes-routing.module';
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('Test del componente CrearHeroeComponent', () => {
   let component: CrearHeroeComponent;
@@ -21,6 +24,7 @@ describe('Test del componente CrearHeroeComponent', () => {
         HttpClientTestingModule,
         MaterialModule,
         BrowserAnimationsModule,
+        RouterTestingModule
       ],
       providers: [{ provide: HeroesService, useClass: HeroesServiceMock }],
       declarations: [CrearHeroeComponent],

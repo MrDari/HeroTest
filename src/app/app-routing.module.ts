@@ -6,14 +6,17 @@ import { HeroesComponent } from './heroes/heroes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/heroes', pathMatch: 'full' },
-  { path: 'heroes', component: HeroesComponent },
-  { path: 'heroes/crear', component: CrearHeroeComponent },
-  { path: 'heroes/editar/:id', component: EditarHeroeComponent }
+  {
+    path: 'heroes',
+    loadChildren: () =>
+      import('./heroes/heroes.module').then((m) => m.HeroesModule),
+
+  },
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
