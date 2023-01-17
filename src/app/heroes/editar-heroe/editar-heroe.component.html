@@ -11,7 +11,7 @@
                 <input formControlName="nameFormControl" matInput />
 
                 <mat-error
-                  *ngIf="heroForm.controls.nameFormControl.hasError('required')"
+                  *ngIf="heroForm.controls['nameFormControl'].hasError('required')"
                 >
                   Nombre es <strong>requerido</strong>
                 </mat-error>
@@ -24,7 +24,7 @@
 
                 <mat-error
                   *ngIf="
-                    heroForm.controls.companyFormControl.hasError('required')
+                    heroForm.controls['companyFormControl'].hasError('required')
                   "
                 >
                   Compañía es <strong>requerido</strong>

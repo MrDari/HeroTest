@@ -41,7 +41,7 @@ export class HeroesComponent {
 
   }
 
-  applyFilter(event: Event) {
+  applyFilter(event: Event):void {
     const filterValue = (event.target as HTMLInputElement).value;
     this.heroesFiltered = this.heroesService.searchHeroes(filterValue);
     if (this.dataSource.paginator) {
@@ -56,7 +56,7 @@ export class HeroesComponent {
 
 
 
-  deleteHero(id: number) {
+  deleteHero(id: number):void {
     let dialogRef = this.dialog.open(DialogDeleteComponent, {
       width: '500px',
     });

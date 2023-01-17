@@ -36,8 +36,7 @@ import { DialogDeleteModule } from './dialog-delete/dialog-delete.module';
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    FormsModule,
-    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

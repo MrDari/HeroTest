@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nombre": "Spiderman",
-      "company": "Marvel"
+      "company": "DC"
     },
     {
       "nombre": "IronMan",
@@ -26,9 +26,9 @@
       "id": 5
     },
     {
+      "id": 6,
       "nombre": "Hulk",
-      "company": "Marvel",
-      "id": 6
+      "company": "DC"
     }
   ]
 }
