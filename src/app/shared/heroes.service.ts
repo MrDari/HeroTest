@@ -14,13 +14,6 @@ const httpOptions = {
 })
 export class HeroesService {
   private api: string = 'http://localhost:3000/heroes';
-  private heroes: Hero[] = [
-    { id: 1, nombre: 'Spiderman', company: 'Marvel' },
-    { id: 2, nombre: 'Hulk', company: 'Marvel' },
-    { id: 3, nombre: 'Aquaman', company: 'DC' },
-  ];
-
-  private heroesFiltered: Hero[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -31,8 +24,6 @@ export class HeroesService {
   public getHero(id: any): Observable<any> {
     return this.http.get<Hero>(`${this.api}/${id}`);
   }
-
-
 
   public addHero(hero: any): Observable<any> {
     return this.http.post<Hero>(this.api, hero, httpOptions);

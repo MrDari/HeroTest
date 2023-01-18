@@ -11,6 +11,7 @@ import { HeroesServiceMock } from '../models/heroes.service.mock';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { RouterTestingModule } from "@angular/router/testing";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
@@ -27,7 +28,8 @@ describe('HeroesComponent', () => {
         BrowserAnimationsModule,
       ],
       providers: [ {provide: HeroesService, useClass: HeroesServiceMock}, {provide: MAT_DIALOG_DATA, useValue : {}}],
-      declarations: [ HeroesComponent ]
+      declarations: [ HeroesComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
 

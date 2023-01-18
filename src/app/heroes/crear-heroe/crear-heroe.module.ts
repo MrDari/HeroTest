@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrearHeroeComponent } from './crear-heroe.component';
 import { MaterialModule } from 'src/app/material.module';
 import { HeroesRoutingModule } from '../heroes-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { HeroesRoutingModule } from '../heroes-routing.module';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    RouterModule
   ]
 })
 export class CrearHeroeModule { }

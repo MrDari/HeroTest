@@ -7,17 +7,29 @@ import { HeroesComponent } from './heroes.component';
 const routes: Routes = [
   {
     path: '',
-    children: [
-      { path: 'heroes', component: HeroesComponent },
-      { path: 'heroes/crear', component: CrearHeroeComponent },
-      { path: 'heroes/editar/:id', component: EditarHeroeComponent },
-      { path: '**', redirectTo: '/heroes', pathMatch: 'full' },
-    ],
+    component: HeroesComponent,
   },
-];
+  {
+    path: 'heroes/crear',
+    component: CrearHeroeComponent,
+    loadChildren: () =>
+    import('./crear-heroe/crear-heroe.module').then(
+      (m) => m.CrearHeroeModule
+      ),
+    },
+    {
+    path: 'heroes/editar/:id',
+    component: EditarHeroeComponent,
+    loadChildren: () =>
+    import('./editar-heroe/editar-heroe.module').then(
+      (m) => m.EditarHeroeModule
+      ),
+    },
+    { path: '', redirectTo: '/heroes', pathMatch: 'full' },
+  ];
 
-@NgModule({
+  @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class HeroesRoutingModule {}

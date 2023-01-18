@@ -5,6 +5,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { HeroesRoutingModule } from '../heroes-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -18,6 +19,7 @@ import { HeroesRoutingModule } from '../heroes-routing.module';
     FormsModule,
     ReactiveFormsModule,
     HeroesRoutingModule,
+    RouterModule
   ]
 })
 export class EditarHeroeModule { }

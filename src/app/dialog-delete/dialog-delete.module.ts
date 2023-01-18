@@ -13,7 +13,6 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     MaterialModule,
-    MatCardModule,
   ]
 })
 export class DialogDeleteModule { }
