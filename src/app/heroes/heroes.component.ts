@@ -61,10 +61,9 @@ export class HeroesComponent {
       width: '500px',
     });
     dialogRef.afterClosed().subscribe((result) => {
-      if (true) {
+      if (result == true) {
         this.heroesService.deleteHero(id).subscribe();
         this.ngOnInit()
-        //this.dataSource.data = this.heroesService.getHeroes();
       }
     });
   }
